@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="peers" attr.type="string" for="node" id="d5" />
+  <key attr.name="serverport" attr.type="string" for="node" id="d4" />
+  <key attr.name="count" attr.type="string" for="node" id="d3" />
+  <key attr.name="protocol" attr.type="string" for="node" id="d2" />
+  <key attr.name="type" attr.type="string" for="node" id="d1" />
+  <key attr.name="size" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="directed">
+    <node id="transfer7">
+      <data key="d0">2 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="transfer8">
+      <data key="d0">3 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="transfer4">
+      <data key="d0">4 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="end">
+      <data key="d3">10</data>
+    </node>
+    <node id="tranfer10" />
+    <node id="transfer10">
+      <data key="d0">5 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="tranfer5" />
+    <node id="transfer5">
+      <data key="d0">3 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="tranfer2" />
+    <node id="transfer2">
+      <data key="d0">2 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="tranfer7" />
+    <node id="transfer3">
+      <data key="d0">3 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="tranfer3" />
+    <node id="transfer1">
+      <data key="d0">1 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="tranfer6" />
+    <node id="tranfer9" />
+    <node id="transfer6">
+      <data key="d0">1 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="tranfer8" />
+    <node id="start">
+      <data key="d4">30080</data>
+      <data key="d5">server1:30080</data>
+    </node>
+    <node id="transfer9">
+      <data key="d0">4 KiB</data>
+      <data key="d1">get</data>
+      <data key="d2">tcp</data>
+    </node>
+    <node id="tranfer1" />
+    <node id="tranfer4" />
+    <edge source="tranfer10" target="end" />
+    <edge source="tranfer5" target="transfer6" />
+    <edge source="tranfer2" target="transfer3" />
+    <edge source="tranfer7" target="transfer8" />
+    <edge source="tranfer3" target="transfer4" />
+    <edge source="tranfer6" target="transfer7" />
+    <edge source="tranfer9" target="transfer10" />
+    <edge source="tranfer8" target="transfer9" />
+    <edge source="start" target="transfer1" />
+    <edge source="tranfer1" target="transfer2" />
+    <edge source="tranfer4" target="transfer5" />
+  </graph>
+</graphml>
