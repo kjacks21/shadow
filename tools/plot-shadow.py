@@ -112,28 +112,28 @@ def main():
                 by hostname the data used in all generated plots. If set,
                 this option overrides all other host expression options,
                 and replaces the value of all host expressions with the
-                value set here.""", 
+                value set here.""",
         action="store", dest="hostpatternall",
         metavar="PATTERN",
         default=None)
 
     parser.add_argument('--host-exp-shadow',
         help="""Set the regex PATTERN that is used with re.search to filter
-                by hostname the data used in generated Shadow plots""", 
+                by hostname the data used in generated Shadow plots""",
         action="store", dest="hostpatternshadow",
         metavar="PATTERN",
         default=".*")
 
     parser.add_argument('--host-exp-tgen',
         help="""Set the regex PATTERN that is used with re.search to filter
-                by hostname the data used in generated TGen plots""", 
+                by hostname the data used in generated TGen plots""",
         action="store", dest="hostpatterntgen",
         metavar="PATTERN",
         default="client")
 
     parser.add_argument('--host-exp-tor',
         help="""Set the regex PATTERN that is used with re.search to filter
-                by hostname the data used in generated Tor plots""", 
+                by hostname the data used in generated Tor plots""",
         action="store", dest="hostpatterntor",
         metavar="PATTERN",
         default="^(relay|4uthority)")
@@ -1115,7 +1115,7 @@ def prune_data(data, skiptime, rskiptime, hostpattern):
     if skiptime == 0 and rskiptime == 0: return data
 
     if 'nodes' in data:
-        for name in data['nodes']:                
+        for name in data['nodes']:
             keys = ['recv', 'send', 'errors', 'firstbyte', 'lastbyte']
             for k in keys:
                 if k in data['nodes'][name]:
@@ -1152,7 +1152,7 @@ def getcdf(data, shownpercentile=0.99, maxpoints=100000.0):
     frac = cf(data)
     k = len(data)/maxpoints
     x, y, lasty = [], [], 0.0
-    for i in xrange(int(round(len(data)*shownpercentile))):
+    for i in range(int(round(len(data)*shownpercentile))):
         if i % k > 1.0: continue
         assert not numpy.isnan(data[i])
         x.append(data[i])

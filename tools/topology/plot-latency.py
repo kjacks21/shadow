@@ -36,7 +36,7 @@ def getcdf(data):
     data.sort()
     frac = cf(data)
     x, y, lasty = [], [], 0.0
-    for i in xrange(len(data)):
+    for i in range(len(data)):
         x.append(data[i])
         y.append(lasty)
         x.append(data[i])

@@ -14,7 +14,7 @@ def worker(taskq, resultq, G, pois):
     for srcid in iter(taskq.get, 'STOP'):
 #        dists = nx.single_source_dijkstra_path_length(G, srcid)
 #        d = {}
-#        for dstid in dists: 
+#        for dstid in dists:
 #            if dstid in pois: d[dstid] = dists[dstid]
 
         path = nx.single_source_dijkstra_path(G, srcid)
@@ -27,7 +27,7 @@ def worker(taskq, resultq, G, pois):
                 l.append(5.0)
                 j.append(0.0)
             else:
-                for i in xrange(len(p)-1):
+                for i in range(len(p)-1):
                     e = G.edge[p[i]][p[i+1]]
                     l.append(float(e['latency']))
                     j.append(float(e['jitter']))
@@ -179,4 +179,3 @@ def main():
     print "done!"
 
 if __name__ == '__main__': main()
-
